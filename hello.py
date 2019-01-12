@@ -3,7 +3,7 @@ class Hello:
 	def __init__(self):
 		self.a = 10
 		self._b = 20
-		self.__c = 30
+		self.__c = 30s
 
 	def public_method(self):
 		print(self.a)

@@ -1,23 +1,32 @@
-# Empty Class / pass keyword
 class Car:
-	pass
+	# init method
+	def __init__(self, speed, color):
+		self.__speed = speed
+		self.__color = color
+
+	#setter
+	def set_speed(self, value):
+		self.__speed = value
+
+	#getter
+	def get_speed(self):
+		return self.__speed
+
+	#setter
+	def set_color(self, value):
+		self.__color = value
+
+	#getter
+	def get_color(self):
+		return self.__color
 
 # instances of the class Car
-ford = Car()
-honda = Car()
-audi = Car()
+ford = Car(300, 'red')
+honda = Car(250, 'blue')
+audi = Car(220, 'black')
 
-# associate the data
-ford.speed = 200
-honda.speed = 220
-audi.speed = 250
+# change data
+ford.set_speed(200)
 
-ford.color = 'red'
-honda.color = 'blue'
-audi.color = 'black'
-
-ford.speed = 300
-ford.color = 'blue'
-
-print(ford.speed)
-print(audi.color)
+print(ford.get_speed())
+print(ford.get_color())

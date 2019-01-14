@@ -7,14 +7,15 @@ class Salary:
         return (self.pay*12) + self.bonus
 
 class Employee:
-    def __init__(self, name, age, pay, bonus):
+    def __init__(self, name, age, salary):
         self.name = name
         self.age = age
-        self.obj_salary = Salary(pay, bonus)
+        self.obj_salary = salary
 
     def total_salary(self):
         return self.obj_salary.annual_salary()
 
-emp = Employee('Tom', 24, 2500, 400)
+salary = Salary(2500, 400)
+emp = Employee('Tom', 24, salary)
 
 print(emp.total_salary())
